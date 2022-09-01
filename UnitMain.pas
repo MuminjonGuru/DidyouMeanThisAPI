@@ -49,6 +49,8 @@ begin
   RESTClient1.BaseURL := Format('https://api.apilayer.com/dymt/did_you_mean_this?apikey=%s&q=%s', [Edit1.Text, Edit2.Text]);
   RESTResponse1.ContentType := 'application//json';
 
+  // LiveBindings designer is linked with RESTResponse content and Memo.Lines properties
+  // so NO need to connect write code to show the response
   Memo1.Lines.Clear;
 
   RESTRequest1.Execute;
